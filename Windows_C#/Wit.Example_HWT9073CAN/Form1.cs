@@ -43,7 +43,13 @@ namespace Wit.Example_HWT9073CAN
         /// HWT9073CAN支持的波特率
         /// Supported baud rate
         /// </summary>
-        private List<int> SupportBaudRateList { get; set; } = new List<int>() { 230400 };
+        private List<int> SupportBaudRateList { get; set; } = new List<int>() { 230400, 2000000 };
+
+        /// <summary>
+        /// HWT9073CAN支持的CAN波特率
+        /// Supported can baud rate
+        /// </summary>
+        private List<int> SupportCanRateList { get; set; } = new List<int>() { 100000, 125000, 200000, 250000, 500000, 800000, 1000000 };
 
         /// <summary>
         /// 控制自动刷新数据线程是否工作
@@ -72,8 +78,17 @@ namespace Wit.Example_HWT9073CAN
             {
                 baudComboBox.Items.Add(SupportBaudRateList[i]);
             }
+
+            // 加载CAN波特率下拉框 Load can baud rate
+            for (int i = 0; i < SupportCanRateList.Count; i++)
+            {
+                CANcomboBox.Items.Add(SupportCanRateList[i]);
+            }
+
             // 默认选中230400    Default 230400
             baudComboBox.SelectedItem = 230400;
+            // 默认选中250K    Default 250K
+            CANcomboBox.SelectedItem = 250000;
 
             // 启动刷新数据线程 Start refreshing data thread
             Thread thread = new Thread(RefreshDataTh);
@@ -124,11 +139,13 @@ namespace Wit.Example_HWT9073CAN
             // 获得连接的串口号和波特率 Obtain the serial port number and baud rate for the connection
             string portName;
             int baudrate;
+            string canrate;
             byte CANId;
             try
             {
                 portName = (string)portComboBox.SelectedItem;
                 baudrate = (int)baudComboBox.SelectedItem;
+                canrate = CANcomboBox.SelectedItem.ToString();
                 CANId = byte.Parse(ModbustextBox.Text.Replace("0x", ""), System.Globalization.NumberStyles.HexNumber);
             }
             catch (Exception ex)
@@ -149,6 +166,8 @@ namespace Wit.Example_HWT9073CAN
                 HWT9073CAN.SetPortName(portName);
                 HWT9073CAN.SetBaudrate(baudrate);
                 HWT9073CAN.SetCANId(CANId);
+                HWT9073CAN.SetCanRate(canrate);
+
                 HWT9073CAN.Open();
                 // 实现记录数据事件 Implement logging data events
                 HWT9073CAN.OnRecord += HWT9073CAN_OnRecord;

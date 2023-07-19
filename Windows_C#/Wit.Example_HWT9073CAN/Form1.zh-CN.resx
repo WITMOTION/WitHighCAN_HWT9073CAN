@@ -123,10 +123,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bandWidth256.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 224</value>
+    <value>15, 197</value>
   </data>
   <data name="bandWidth256.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 29</value>
+    <value>195, 23</value>
   </data>
   <data name="bandWidth256.Text" xml:space="preserve">
     <value>设置带宽 256Hz</value>
@@ -135,10 +135,10 @@
     <value>NoControl</value>
   </data>
   <data name="bandWidth20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 187</value>
+    <value>15, 168</value>
   </data>
   <data name="bandWidth20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 29</value>
+    <value>196, 23</value>
   </data>
   <data name="bandWidth20.Text" xml:space="preserve">
     <value>设置带宽 20Hz</value>
@@ -147,10 +147,10 @@
     <value>NoControl</value>
   </data>
   <data name="returnRate50.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 150</value>
+    <value>15, 138</value>
   </data>
   <data name="returnRate50.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 29</value>
+    <value>195, 23</value>
   </data>
   <data name="returnRate50.Text" xml:space="preserve">
     <value>设置回传速率 50Hz</value>
@@ -159,103 +159,124 @@
     <value>NoControl</value>
   </data>
   <data name="returnRate10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 113</value>
+    <value>15, 108</value>
   </data>
   <data name="returnRate10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 29</value>
+    <value>196, 23</value>
   </data>
   <data name="returnRate10.Text" xml:space="preserve">
     <value>设置回传速率 10Hz</value>
   </data>
   <data name="SetAddrBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 261</value>
+    <value>15, 227</value>
   </data>
   <data name="SetAddrBtn.Text" xml:space="preserve">
     <value>更改设备地址为 50</value>
   </data>
   <data name="readReg03Button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 76</value>
+    <value>16, 79</value>
   </data>
   <data name="readReg03Button.Text" xml:space="preserve">
     <value>读取03寄存器</value>
   </data>
   <data name="endFieldCalibrationButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 298</value>
+    <value>125, 256</value>
   </data>
   <data name="endFieldCalibrationButton.Text" xml:space="preserve">
     <value>结束磁场校准</value>
   </data>
   <data name="startFieldCalibrationButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 298</value>
+    <value>15, 256</value>
   </data>
   <data name="startFieldCalibrationButton.Text" xml:space="preserve">
     <value>开始磁场校准</value>
   </data>
   <data name="appliedCalibrationButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 39</value>
+    <value>15, 49</value>
   </data>
   <data name="appliedCalibrationButton.Text" xml:space="preserve">
     <value>加计校准</value>
   </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 184</value>
+    <value>0, 190</value>
   </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>296, 378</value>
+    <value>222, 343</value>
   </data>
   <data name="groupBox3.Text" xml:space="preserve">
     <value>控制传感器</value>
   </data>
   <data name="ModbustextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>161, 101</value>
+    <value>93, 119</value>
   </data>
   <data name="baudComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 70</value>
+    <value>93, 56</value>
+  </data>
+  <data name="CANcomboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 87</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 104</value>
+    <value>22, 122</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 15</value>
+    <value>65, 12</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>设备地址：</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 15</value>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 90</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 12</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Can波特率：</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>串口端口：</value>
   </data>
   <data name="closeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 136</value>
+    <value>133, 150</value>
   </data>
   <data name="closeButton.Text" xml:space="preserve">
     <value>关闭</value>
   </data>
   <data name="openButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 136</value>
+    <value>28, 150</value>
   </data>
   <data name="openButton.Text" xml:space="preserve">
     <value>打开</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 73</value>
+    <value>13, 59</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 15</value>
+    <value>77, 12</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>回传速率：</value>
+    <value>串口波特率：</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>296, 184</value>
+    <value>222, 190</value>
   </data>
   <data name="groupBox2.Text" xml:space="preserve">
     <value>连接传感器</value>
   </data>
+  <data name="leftPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 533</value>
+  </data>
+  <data name="dataRichTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>528, 513</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>534, 533</value>
+  </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value>传感器数据</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>766, 533</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

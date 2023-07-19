@@ -43,7 +43,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Wit.SDK, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Wit.SDK, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DII\Wit.SDK.dll</HintPath>
     </Reference>

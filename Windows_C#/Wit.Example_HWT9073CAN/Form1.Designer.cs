@@ -43,6 +43,8 @@ namespace Wit.Example_HWT9073CAN
             this.ModbustextBox = new System.Windows.Forms.TextBox();
             this.baudComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.CANcomboBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.Button();
@@ -150,16 +152,29 @@ namespace Wit.Example_HWT9073CAN
             // groupBox2
             // 
             resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Controls.Add(this.ModbustextBox);
+            this.groupBox2.Controls.Add(this.CANcomboBox);
             this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.closeButton);
+            this.groupBox2.Controls.Add(this.ModbustextBox);
             this.groupBox2.Controls.Add(this.portComboBox);
             this.groupBox2.Controls.Add(this.openButton);
             this.groupBox2.Controls.Add(this.baudComboBox);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            // 
+            // CANcomboBox
+            // 
+            resources.ApplyResources(this.CANcomboBox, "CANcomboBox");
+            this.CANcomboBox.FormattingEnabled = true;
+            this.CANcomboBox.Name = "CANcomboBox";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
             // 
             // label3
             // 
@@ -258,6 +273,8 @@ namespace Wit.Example_HWT9073CAN
         private System.Windows.Forms.Button bandWidth20;
         private System.Windows.Forms.Button returnRate50;
         private System.Windows.Forms.Button returnRate10;
+        private System.Windows.Forms.ComboBox CANcomboBox;
+        private System.Windows.Forms.Label label4;
     }
 }
 
