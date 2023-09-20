@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Wit.SDK.Device.Device.Device.DKey;
 using Wit.SDK.Modular.Sensor.Modular.DataProcessor.Constant;
 using Wit.SDK.Modular.WitSensorApi.Modular.HWT9073;
 
@@ -276,14 +277,6 @@ namespace Wit.Example_HWT9073CAN
             builder.Append("H").Append(":").Append(HWT9073CAN.GetDeviceData(WitSensorKey.Q2)).Append("m \t");
             // 温度   Temp
             builder.Append("T").Append(":").Append(HWT9073CAN.GetDeviceData(WitSensorKey.T)).Append("℃ \n");
-            // GPS
-            builder.Append("GPSHeight").Append(":").Append(HWT9073CAN.GetDeviceData(WitSensorKey.GPSHeight)).Append(" m \t");
-            builder.Append("GPSYaw").Append(":").Append(HWT9073CAN.GetDeviceData(WitSensorKey.GPSYaw)).Append("° \t");
-            builder.Append("GPSV").Append(":").Append(HWT9073CAN.GetDeviceData(WitSensorKey.GPSV)).Append("km/h \n");
-            // 定位精度 Positioning accuracy
-            builder.Append("PDOP").Append(":").Append(HWT9073CAN.GetDeviceData(WitSensorKey.PDOP)).Append("\t");
-            builder.Append("VDOP").Append(":").Append(HWT9073CAN.GetDeviceData(WitSensorKey.VDOP)).Append("\t");
-            builder.Append("HDOP").Append(":").Append(HWT9073CAN.GetDeviceData(WitSensorKey.HDOP)).Append("\n");
             // 版本号  Version
             builder.Append("VersionNumber").Append(":").Append(HWT9073CAN.GetDeviceData(WitSensorKey.VersionNumber)).Append("\n");
             return builder.ToString();
@@ -338,7 +331,7 @@ namespace Wit.Example_HWT9073CAN
                 // 下面这行和上面等价推荐使用上面的 Equivalent to above
                 //HWT9073CAN.SendProtocolData(new byte[] { 0xff, 0xaa, 0x27, 0x03, 0x00 }, waitTime);
 
-                string reg03Value = HWT9073CAN.GetDeviceData("03");
+                short? reg03Value = HWT9073CAN.GetDeviceData(new ShortKey("03"));
                 MessageBox.Show($"寄存器03值为 : {reg03Value}");
             }
             catch (Exception ex)
