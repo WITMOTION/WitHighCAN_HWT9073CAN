@@ -49,7 +49,7 @@ class DeviceModel:
     canid = []
     # endregion
 
-    def __init__(self, deviceName, portName, baud, canBaud):
+    def __init__(self, deviceName, portName, baud, canBaud, callback_method):
         print("初始化设备模型")
         # 设备名称（自定义） Device Name
         self.deviceName = deviceName
@@ -59,6 +59,8 @@ class DeviceModel:
         self.serialConfig.baud = baud
         # 串口CAN波特率 Can baud
         self.serialConfig.canBaud = canBaud * 1000
+        self.deviceData = {}
+        self.callback_method = callback_method
 
     # region 获取设备数据 Obtain device data
     # 设置设备数据 Set device data
@@ -200,6 +202,7 @@ class DeviceModel:
             self.set("AccX", round(Ax, 3))
             self.set("AccY", round(Ay, 3))
             self.set("AccZ", round(Az, 3))
+            self.callback_method(self)
         # 角速度 Angular velocity
         elif Bytes[1] == 0x52:
             Gx = self.getSignInt16(Bytes[3] << 8 | Bytes[2]) / 32768 * 2000
